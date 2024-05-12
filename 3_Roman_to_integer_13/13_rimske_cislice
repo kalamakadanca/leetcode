@@ -1,0 +1,32 @@
+def romanToInt(s):
+    for i in range(len(s)):
+        cislo = 0
+        if s[i] == "I" and s[i+1] == "V" or s[i+1] == "X":
+            continue
+        elif s[i] == "V" and s[i-1] == "I":
+            cislo += 4
+        elif s[i] == "X" and s[i-1] == "I":
+            cislo += 9
+        elif s[i] == "I":
+            cislo += 1
+        elif s[i] == "V":
+            cislo += 5
+        elif s[i] == "X":
+            cislo += 10
+        elif s[i] == "L":
+            cislo += 50
+        elif s[i] == "C":
+            cislo += 100
+        elif s[i] == "D":
+            cislo += 500
+        else:
+            cislo += 1000
+    return cislo
+
+
+print(romanToInt("III"))
+#3
+print(romanToInt("LVIII"))
+#58
+print(romanToInt("MCMXCIV"))
+#1994
