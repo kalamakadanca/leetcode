@@ -2,9 +2,13 @@
 
 
 def isPalindrome(x):
-    print(x//2)
-    for i in range(x//2):
-        print("F")
+    x = str(x)
+    if x[0] == "-":
+        return False
+    for i in range(len(x)):
+        if x[i] != x[-i - 1]:
+            return False
+    return True
 
 
 
