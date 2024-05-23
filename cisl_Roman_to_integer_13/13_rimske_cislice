@@ -1,15 +1,12 @@
 def romanToInt(s):
     cislo = 0
-    for i in range(len(s)):
-        try:
+    for i in range(len(s)-1):
             if s[i] == "I" and s[i+1] == "V" or s[i+1] == "X":
                 continue
             elif s[i] == "V" and s[i-1] == "I":
                 cislo += 4
             elif s[i] == "X" and s[i-1] == "I":
                 cislo += 9
-        except IndexError:
-            continue
 
         if s[i] == "I":
             cislo += 1
@@ -35,3 +32,29 @@ print(romanToInt("LVIII"))
 #58
 print(romanToInt("MCMXCIV"))
 #1994
+
+
+
+def romanToInt(s):
+    cislo = 0
+    for i in range(len(s)-1):
+        for j in range(i+1, len(nums)):
+
+    return cislo
+
+
+print(romanToInt("III"))
+#3
+print(romanToInt("LVIII"))
+#58
+print(romanToInt("MCMXCIV"))
+#1994
+
+
+
+
+def twoSum(nums, target):
+    for i in range(len(nums)-1):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return([i, j])

@@ -1,0 +1,19 @@
+def plusOne(digits):
+    cislo = ""
+    vysledek = []
+    for i in digits:
+        cislo += str(i)
+    cislo = int(cislo)
+    cislo += 1
+    cislo = str(cislo)
+    for i in range(len(cislo)):
+        cislo_f = int(cislo[i])
+        vysledek.append(cislo_f)
+    return vysledek
+
+print(plusOne([1,2,3]))
+# Output: [1, 2, 4]
+print(plusOne([4, 3, 2, 1]))
+# Output: [4, 3, 2, 2]
+print(plusOne([9]))
+# Output [1, 0]
